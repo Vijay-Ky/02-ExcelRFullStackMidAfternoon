@@ -1,0 +1,26 @@
+Command Line Arguments
+----------------------
+
+- At the time of running a class(program) we can suply some values as arguments to the main method of a class that we are running.
+- We can pass some arguments to the program while running.
+- By using that arguments we can perform some operations.
+  Ex: java -cp ../classes A abc xyz 123 test
+  
+- while runnig a class if we dont supply any arguments to the main method then JVM is going to create an empty String array object, then that object would be supplied as an argument to the main method.
+
+- If we are supplying any arguments while running the class then JVM is going to create a String array Object with the supplied elements.
+ Ex: java -cp ../classes A abc xyz 123 test
+ JVM ==> String[] {"abc", "xyz", "123", "test"};
+ then it would be supplied to main method argument `args = String[] {"abc", "xyz", "123", "test"};`
+
+- JVM can only create single dimentional array by using command line arguments.
+
+- All the command line arguments will be converted to the String type.
+
+- We need to supply the command line arguments by using space as a seperator.
+
+- parseInt ==> is going to convert the `int value` which is in the form of `String` to the `primitive int` value.
+parseInt method takes one String as the argument.
+
+- if you want to consider space also in the command line argument then enclose within a pair of double quotes.
+ Ex: java -cp ../classes F 10 20 "vijay kumar" test

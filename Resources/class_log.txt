@@ -1,0 +1,4 @@
+06.11
+Core Java Part - 6 | literals | comments | basic arithmetic operators | relational operators | string concatination | datatpes in java | variables
+07.11
+Core Java Part - 7 | working with primitve and String datatypes | local variable | compound assignments

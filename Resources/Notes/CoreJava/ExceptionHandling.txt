@@ -1,0 +1,339 @@
+						Exception Handling
+						------------------
+- An Exception is abnormal condition, in java an exception is an event that
+disrupts the normal flow of program exection. it is an object that thrown at runtime
+
+- In Java we have Exception handling Mechanism unlike C.
+
+- In Java we can able handle the exception by using try and catch blocks.
+
+  Advantage of Exception handling
+  -------------------------------
+ we can maintain the normal flow of the application.
+ 
+1. For abnormal condition corresponding exception object will be raised.
+2. Raised exception object should be handled to succesfully continue.
+
+ Two types of Exceptions
+ --------------------------
+1. Checked Exceptions(Exception) ==> Are Notified At at compile time itself
+2. Unchecked Exceptions(RuntimeException and Error is considered as unchecked exception) ==> Are raised at the Runtime
+
+Unchecked Exceptions
+---------------------------
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+int i = 10 / 0;
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+int[] x = {12, 30, 20};
+int i = x[3];
+
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "<local1>" is null
+String s1 = null;
+int i = s1.length();
+
+Exception in thread "main" java.lang.ClassCastException: class java.lang.Object cannot be cast to class D 
+Object obj = new Object();
+D d1 = (D) obj;
+
+Exception in thread "main" java.lang.NumberFormatException: For input string: "abc"
+int i = Integer.parseInt("abc");
+
+StringIndexOutOfBoundsException
+String s1 = "hello";
+String s2 = s1.substring(5, 10);
+
+
+public static void main(String[] args) 
+{
+	main(args);
+}
+Exception in thread "main" java.lang.StackOverflowError
+
+
+java.lang.OutOfMemoryError: Java heap space
+int[] x = new int[999999999];
+
+
+class J
+{
+	//static int x;
+}
+class K
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("main begin");
+		J.x = 20;
+		System.out.println("main end");
+	}
+}
+java.lang.NoSuchFieldError: x
+
+
+class L
+{
+	/*
+	void test()
+	{
+	}*/
+}
+class M
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("main begin");
+		L obj = new L();
+		obj.test();
+		System.out.println("main end");
+	}
+}
+NoSuchMethodError
+
+
+
+/*class N
+{
+}*/
+class O
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("main begin");
+		N n1 = new N();
+		System.out.println("main end");
+	}
+}
+java.lang.NoClassDefFoundError: N
+
+
+- By using try and catch blocks we can handle the raised exception object.
+
+- Whatever the exception causing statements are there we should keep them inside the try block and according to the raised exception object we need to develop the catch block.
+Ex:
+try
+{
+	int i = 10 / 0;
+}
+catch (ArithmeticException ex)
+{
+} 
+
+- `try` and `catch` are keywords
+
+- The raised the exception object would be supplied as an argument to the catch block.
+
+- Nested try-catch is possible
+  try
+  {
+	try
+	{
+	}
+	catch(AE ex)
+	{
+	}
+  }
+  catch(AE ex2
+  {
+  }
+
+- In a try block we can keep any no. of exception and error causing statements.
+
+- for one try we can keep multiple catch blocks.
+
+- for an exception or error to be handled succesfully compulsary the corresponding catch block should be available.
+
+- In all the exception and error classes toString method of object class got overrided to return the content of the object instead of the memory location.
+
+- for one catch you can only supply one exception or one error multiple exception and error would not be possible by using normal syntax.
+Ex: catch (NumberFormatException ex)
+
+- if you want to handle multiple exception and errors then you use this syntax.
+  Ex: catch (NumberFormatException | ArithmeticException ex)
+  
+- `finally` is a keyword in java.
+
+- `finally` is a block that we are using along with the try and catch blocks.
+
+- Whether exception is there or not and Whether the raised exception object gets handled or not, once the control enters the try block then compulsary `finally block` would be executing. 
+
+- we can able to use `finally block` to close the resources that we have used/we dont need any more.
+
+- Even if there is a `return` statement either in the try or catch, once the control enters the try block definately finally would be executing.
+Ex:1
+try
+{
+	return;
+}
+catch(AE ex)
+{
+}
+finally
+{
+	sop("from finally");
+}
+o/p ==> from finally
+Ex:2
+try
+{
+}
+catch(AE ex)
+{
+	return;	
+}
+finally
+{
+	sop("from finally");
+}
+o/p ==> from finally
+
+Ex:3
+try
+{
+	return;	
+}
+catch(AE ex)
+{
+	return;	
+}
+finally
+{
+	sop("from finally");
+}
+o/p ==> from finally
+
+- using `ex.printStackTrace(System.err)` we get the details about the raised exception object. System.err argument is optional.
+
+- `System.err` Standard Error Stream - to print error to the output screen  
+
+- To prevent data corruption and data inconsistancy we may have close some resources, those statements we can keep inside finally block.
+
+- To execute some madatory statements regardless of the exception and handling status, we can use finally block.
+
+- local varibles of try/catch/finally cant be used outside, if you want to use variables in all these blocks then declare those variables before starting of try block.
+
+
+/*possible combinations
+try-catch
+try-catches
+try-catch-finally
+try-catches-finally
+try-finally
+*/
+
+- `finally` without `try` is not possible.
+
+- Class.forName(""); ==> load the class
+- Class.forName(""); ==> causes checked type of exception ==> ClassNotFoundException
+
+- we can handle any checked type of exception using try and catch
+
+- clone(); ==> causes CloneNotSupportedException
+
+- IOException can handle all these checked exceptions.
+
+list of checked exceptions that are subclasses of IOException in Java:
+
+FileNotFoundException
+InterruptedIOException
+EOFException
+CharConversionException
+UnsupportedEncodingException
+UTFDataFormatException
+ObjectStreamException
+OptionalDataException
+SyncFailedException
+WriteAbortedException
+
+- DriverManager.getConnection(""); ==> SQLException
+
+- Thread.sleep(1000); == InterruptedIOException
+
+- df.parse(""); ==> ParseException
+
+
+Usage of `throws` keyword
+--------------------------
+
+- we can use throws keyword for any method.
+
+- mainly we are going to use throws for handing over the resposibility of handling checked exceptions to another block/JVM.
+
+- by using throws we can skip the error at the compile time.
+
+- JVM doesnt have the try/catch mechanism.
+
+- try/catch ==> handling the exception
+
+- throws ==> handing over exception
+
+- for the unchecked exceptions there is no need of keeping throws. even if you are keeping there is no issue.
+  Ex: throws ArithmeticException
+  
+- we can throw multiple exceptions
+  Ex:  throws SQLException, InterruptedException
+  but instead we could go for root `Exception`
+  Ex: throws Exception
+  
+- Exception class is the root for both  checked and unchecked exceptions.
+
+- Throwable is the root for both Exception class and Error class
+  we can go with Throwable also
+  Ex: throws Throwable
+
+- Throwable can able to address Exception 
+
+- Exception cant address Throwable, because Exception comes under Throwable
+
+right ==> //test() - Exception, main() - Exception
+right ==> //test() - Exception, main() - Throwable
+wrong ==> //test() - Throwable, main() - Exception
+right ==>  //test() - Throwable, main() - Throwable
+
+//Exception cant handle Error
+//Error cant handle Exception
+//but both will be handled by Throwable
+
+- try block can be empty(doesnt have any unchecked exception causing statements) if catch is unchecked.
+
+- try cant be empty if the catch is checked type
+  you will get error -> `checked catch argument type` is never thrown in body of corresponding try statement 
+  
+- try can be empty if the catch argument is Exception
+
+- try can be empty if the catch argument is Throwable
+
+- Exception and Throwable as semi-checked, bcz
+  with respect to try/catch they act as unchecked.
+  with respect to methods they act as checked.
+  
+  
+- `throw` is a keyword.
+
+- by using throw keyword we can only raise the exception explicitely.
+
+- we can raise the exception by providing some message, we need to call the constructor which takes string as the argument.
+Ex: throw new ArithmeticException("we are terminating the flow by raising an exception explicitely");
+
+- throw statement must be the last statement in the current block.
+
+- catch argument must be Throwable or sub-class to Throwable type.
+  Ex: catch(anyThrowableType or sub-class to Throwable) ==> right
+  Ex: catch(other than ThrowableType and sub-class to Throwable) ==> wrong
+  
+- `throws` must be Throwable type or sub-class to to Throwable type.
+
+- we can create our own custome exception classes.
+
+- the custome exception class must be  extending Throwable type or sub-class to throwable type.
+
+- while extending custome Exception class if you use Exception or Throwable, or any checkedException type then it will be treated as checked. so if you dont want to get use throws or handling mechanism then just go for any unchecked exception type.
+
+- 
+
+
+
+
+
+
+

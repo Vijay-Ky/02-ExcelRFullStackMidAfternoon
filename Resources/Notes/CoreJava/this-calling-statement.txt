@@ -1,0 +1,22 @@
+
+
+- if there is a `this` calling statement inside the constructor, after `this` statement IIB calling will not be kept by the compiler.
+Ex:
+A()
+{
+	this();
+	//There wont be any IIB calling statement kept by the compiler, bcz already from the current class constructor IIBs got executed, once again it wont execute here.
+}
+
+- Java doesnt supports multiple inheritence in case of classes.
+- One class cant extends more than one class at a time.
+Ex: Invalid
+class A
+{
+}
+class B
+{
+}
+class C extends A, B
+{
+}

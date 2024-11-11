@@ -1,0 +1,23 @@
+Abstraction - 
+------------
+- abstract means something which not complete.
+1. Abstraction is one of the object oriented programming language concept.
+2. Abstraction is one of the basic pillars of object oriented programming language(OOPs).
+3. Hiding the internal implmentation details which is unneccessary for that class or interface, and just showing the functionality.
+4. In case of abstraction also we are acheiving security, since we are not exposing the internal implmentation details which is unneccessary implmentation for that class or interface.
+5. A class can be declared as abstract.
+6. `abstract` is a keyword.
+7. If a class is abstract then, that class can have any no. of abstract methods.
+8. we can declare a non-static-method as `abstract`.
+9. Abstract methods doesnt contain a body.
+10. abstract class can contain both abstract methods and non-abstract metods(concrete, defined).
+11. abstract class can also become a member of the java file.
+12. for abstract class also javac compiler generates a `.class` file.
+13. If at least one method is declared as abstract then, class must be declared as abstract. 
+14. If we declare any class as abstract then, we cant create an Object to that class.(We cant instantiate that class).
+15. Abstract class cant be instantiated.
+16. We should be careful while declaring class as abstract, i,e if we need to declare abstract methods then only it is advisiable to declare class as abstract.
+17. Even though if you are not having abstract methods and still if you are declaring class as abstract then, for an abstract class you cant create an object.
+18. if any class is extedning abstract class then compulsary that class must implement all the abstract-methods of the abstract class, if at least one abstract-method is not implemented in the sub-class, then compulsary that sub-class must be declared as abstract.
+19. abstract class can contain constructors. Since we can invoke them from the sub-class constructors.
+20. constructors are not inheriting to the sub-class but constructors are involving in the execution.

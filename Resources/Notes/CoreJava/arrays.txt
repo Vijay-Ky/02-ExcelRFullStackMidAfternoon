@@ -1,0 +1,87 @@
+Arrays in Java
+--------------
+
+- An array is an indexed collection of fixed number of homogenious data elements.
+- We can able to represent a group of similar kind of data elements as a unit.
+- Arrays mantains indexes for all the elmements.
+- Array index starts from `0`
+- Once we create an array a specific size, there is no way of increase or decrease the size according to our requirements.
+- There is no in-built data-structure support for an array.
+- Arrays are also objects in Java.
+- We can able to create an array of any type of objects.
+  Ex: Employee, Student, Object, String, A, B
+- instead of declaring huge number of normal variables which are of the same type, we could go for arrays instead. 
+- size and lenght both same
+- no. of indexes that would be create is `lenght - 1` or `size - 1` 
+- we can find the size or lenght of an array by using `lenght` property
+  Ex: int[] x = new int[4]; System.out.println(x.length);
+- lenght is property with respect to arrays and you use lenght property on any array reference variable.
+- if you are calling anything on the `null` reference then you would get NullPointerException
+Ex: int[] x = new int[9];
+     x = null;
+	 s.o.p(x.lenght);//NPE
+- different ways of creating array references
+		int x[] = new int[2];
+		int []y = new int[2];
+		int[] z = new int[2];
+		int[]p = new int[2];
+- invalid reference creation
+  ints[] = new int[2];
+- when you are iterating an array using normal for loop then you must start(initialize) the variable from `0`. because array index starts from `0`
+- we can create an array with size 0, array would not have any indexes.
+  String []y = new String[0];
+- we can specify an array size with an `int` value.
+- we cant able to create an array with the negative size, otherwise you would get 
+  `NegativeArraySizeException`
+  String []z = new String[-2];//NegativeArraySizeException: -2
+- if you are trying to access an array index which is not available then you would get ArrayIndexOutOfBoundsException.
+- in a single line by using `,` as a seperator we can declare any no. of array references of the same type.
+Ex: int[] x, y, z;
+- in a single line by using `,` as a seperator we can declare or initialize any no. of array references of the same type.
+Ex: int[] x, y = new int[7], z, a = new int[6];
+
+- by using Arrays.toString(x) we can print string representation of the contents of the specified array, The string representation consists of a list of the array's elements, enclosed in square brackets ("[]"). Adjacent elements are separated by the characters ", " (a comma followed by a space). Elements are converted to strings.
+Ex: int[] a = new int[4]; s.o.p(Arrays.toString(a));//0/p [0, 0, 0, 0]
+
+//- String is an inbuilt class, whatever the variables that you are creating all those variables are reference variables only. 
+//- There is a difference between normal ref. variable and array ref. variable
+//Ex: String str = "abc"; ==> is a normal ref. variable.
+//Ex: String str[] = new String[4]; ==> is a array ref. varible. 
+
+- The default values for Class type of arrays are `null` values.
+  Ex: A[] a = new A[2]; s.o.p(a[0]); // o/p - null  
+  Ex: String[] b = new String[2]; s.o.p(b[0]); // o/p - null 
+
+- Another way of creating Array object
+  Ex: new int[] {10, 20, 30, 40}; 
+  - We are not specifying the size exlicitely, because by supplying the elements in the curly braces {} we are specifying the size indirectly.  
+  - we dont have to individually initialize the array indexes. according to the elements that are inside the curly braces {}, indexes would be initialized.
+  
+- This one is invalid
+  Ex: new int[4] {10, 20, 30, 40};//array creation with both dimension expression and initialization is illegal
+- in case `==`  if the operands are references then(reference comparision would  happen), it is going check whether these two references are pointing to the same object or different object.
+  if same object you will get `true` if not you will get `false`.
+
+- in case of arrays casting is not possible.
+  Ex: int[] x = new byte[4];//incompatible types: byte[] cannot be converted to int[]
+  because: arrays are not same as primitives, one array type cant be converted to another array type.
+
+
+- Another way of creating Array object
+  Ex: {10, 20, 30, 40};//int array object creation
+      {10.0f, 20.0f};//float array object creation
+	  {true, false};//boolean array object creation
+	  {"abc", "xyz"};//String array object creation
+	  {'a','b'};//char array object creation
+	  
+- Arrays.toString(x) method is used to obtain a string representation of the contents of an array.
+	 
+	 /*
+		1. An array is an indexed collection of fixed number of homogenious data elements.
+		2. We can use an array to represent a group of values of same the type.
+		3. Once we create an array we cant resize it. it is fixed.
+		4. Arrays are also objects in java.
+		5. Arrays has indexes and index will be starting from 0
+		6. We can develop any dimentional arrays with the help of rows and columns.
+		7. Array elements must be of the same type. different type not possible.
+		*/

@@ -1,0 +1,39 @@
+Final Keyword In Java
+-------------------------
+- `final` is a keyword in java.
+- we can use final keyword for local variables as well as for non-static global variable.
+- if we declare a local variable as final then the value for that variable is un-changeable.
+- we cant modify the value for the final variable.
+- whatever the initialized value is there that value itself is fixed. we could able to change the value further.
+- `final` is similar to `const` in the c programming. Since we are acheiving the job of `const` keyword through `final` keyword in Java, the `const` in Java is deprecated(unused).
+- declaration and intialization in different lines is possible for the local final variables.
+- default values will not be available for final global variables.
+
+
+
+
+//final keyword can be used along with static, non-static, local variables
+//in case of final variables values are fixed, it is similar to constant in c
+//we have const keyword in java but that has been deprecated instead we use final keyword
+//if you initialize a final variable with any value that is fixed, it cant be changed further.
+
+
+- local variables cant static
+- if any global varible declared with static and final they are perfect constants in java
+- default values are not available for a final global-variable either it can be static or non-static.
+
+- if you declare any global variable as final and static it is a perfect constant and should represent that variable with capital letters by convention.
+Ex: final static String driver = "driver name";
+
+- we can declare a method as final
+- if we declare a method as final then that method cant be overrided from the sub-class.
+- final methods cant be overrided.
+- final and static are illegal combinations for a method.
+- we can make(declare) class as final.
+- if we make class as final then that class cant be extended further.
+- final classes cant have a sub-class.
+- outer class cant be declared with both `final` and `abstract`
+- outer or normal class cant be declared as `private`
+- outer or normal class cant be declared as `protected`
+- outer or normal class cant be declared as `static`
+        

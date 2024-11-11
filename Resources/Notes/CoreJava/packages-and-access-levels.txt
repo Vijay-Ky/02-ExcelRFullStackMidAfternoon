@@ -1,0 +1,108 @@
+Packages and Access-Levels
+------------------------------
+1. Any production grade project will be developed in the package structure.
+2. By using packages we can seperate the different modules.
+3. `package` is the keyword in Java
+4. If any program if you want under the package structure then keep the package declaration in the beggining.
+5. package declaration must be the first statement in a java program.
+   Ex: package pack1;
+6. We can create any no. of packages in the `src`(source) folder.
+7. In the command line we need to trigger `javac` and `java` commands from the `src` location
+8. For the compilation we can use `src> javac -d ../classes com/A.java`
+   For the execution we can use `src> java -cp ../classes com.A`
+   
+- In Java We have 4 Access-Levels, Access-Specifiers, Access-Modifiers
+  PRIVATE
+  DEFAULT
+  PROTECTED
+  PUBLIC
+  
+  <_______<_________< towards narrower
+  private < default < protected < public
+  --------------------> towards wider
+
+  >______>________> towards narrower
+  public > protected > default > private
+  <-------------------- towards wider
+  
+  
+  private is the narrower ==> very restricted
+  
+  public is the wider ==> There is no restriction at all
+  
+  
+  `default` access specfier is also called as `friendly` or `package-level`
+  
+  PRIVATE
+  --------
+   - `private` keyword and one of the access specfier.
+   - `private` is the most narrower
+   - `private` members can be only accessed within that declared class. not outside.
+   - we can declare non-static variable as `private`, and we can access from the same class.
+   - we can declare non-static method as `private`, and we can access from the same class.
+   - we can declare static variable as `private`, and we can access from the same class.
+   - we can declare static method as `private`, and we can access from the same class.
+   
+   E- private members cant be accessed outside of the declared class.
+   
+   E-private members are not inheriting to the sub class.
+   
+   
+   DEFAULT
+   ---------
+   - If we dont declare any member with any access specfier explicitly then the default access specfier for those members would be `default` 
+   - `default` is also called as `friendly` or `package-level`
+   E - `default` members can be accessed within the declared class.
+   E - `default` members can be accessed within the same-package non-sub-class.
+   E - `default` members can be accessed within the same-package    sub-class.
+   
+   E - constructors can be declared with access specfiers.
+   
+   E - accessing private constructor from outside the class and inside the same package non-sub-class is not possible, bcz constructor has a private access in the declared class.
+   
+   E - accessing private constructor from outside the class and inside the same package sub-class through a sub-class object creation is not possible, bcz constructor has a private access in the super-class.
+   
+   E - even though we dont have any main-method or any-constructors in the sub-class still we get error if the super-class no-arg constructor is private, bcs in the sub-class we have a no-arg default constructor which will be calling super-class no-arg constructor which is private.
+
+   E - even though we dont have any main-method or any-constructors in the sub-class still we get error if the super-class no-arg constructor is private, bcs in the sub-class we have a no-arg default constructor which will be calling super-class no-arg constructor which is private. 
+   Solution:
+   E - in the sub-class instead of calling the super-class private constructor, create your own-constructor and call other constructor which is not private.
+   
+   E - local variables cant be declared with access specifiers.
+      Ex: void test() { private int i = 10; }
+   
+  E - same package non-sub-class - create objects for all the multi-level classes and access default member through all object references.
+  
+  E - Just create one class and inside that a non-static default method.
+  E - Create another sepeate class and in that main-method create an object to the previous class and call the non-static default method of previous class.
+  
+  
+  E - if you are trying to refere to another package class, then you need a proper reference 
+  Ex: some_package.A a1 = new some_package.A()
+  
+  - for the constructors also we can keep the access specifiers..
+  
+  - the default constructor's access specfier is public.
+  
+  - instead of giving references to the classes of outside, we can import them.
+  Ex:
+  import some_package.A
+  
+  - `import` statement must be after the `package` statement.
+  Ex: 
+  package com;
+  import some_package.A
+  
+  - import some_package.*; //importing all the files from the some_package (not recommended)
+  
+  protected
+  ---------
+   - `protected` is a keyword. and access specfier.
+  
+  
+  
+  
+  
+  
+  
+  

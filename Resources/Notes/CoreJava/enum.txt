@@ -1,0 +1,54 @@
+enum(enumeration)
+-------------------
+- "An enum is an ordered collection of fixed number of same type of constants"
+ - An enumeration is a complete, ordered listing of all the items in a collection.
+- Enums allow you to define a set of named constants.
+- An enum is an ordered collection of all the items of same type.
+- introduced in JDK 1.5
+- enums are mainly used for grouping similar kind of and fixed number of constants.
+- Ex: all days in a week, all the months in a year
+- enum can become a member of java file
+- for enum also compiler will be generating a .class file
+
+- enum constant must be a valid identifier.
+
+- by using enum reference we can access enum constants.
+
+- if enum contains only constants then ";" is optional
+  Ex:  CON1, CON2, CON3, CON4
+  
+- using reference  also we can access enum
+  Ex: 
+enum G
+{
+	CON1, CON2;
+}
+class H
+{
+	main(String[] args)
+	{
+		G g1 = G.CON1;
+		G g2 = G.CON2;
+		System.out.println(g1);
+        System.out.println(g2);
+	}
+}
+
+- we can only access the available enum constants.
+
+- enum can become a member of the class also
+
+- we can develop an enum inside a class as a member of the class
+
+//every enum constant will be having unique index value.
+//we can find out that by ordinal()
+
+//ordinal() method is used for identifying order of the constant(index of the constant)
+
+Ex: 
+enum Month
+{
+	JAN;
+}
+Month t1 = Month.JAN;
+System.out.println(t1.ordinal());

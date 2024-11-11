@@ -1,0 +1,7 @@
+- Has-A is aslo called as Composition
+
+- Its not a traditional inheritance. We are not inheriting anything from the super-class.
+
+- We are going to make a connection from the sub-class to the super-class via a reference of super-class type kept in the sub-class.
+
+

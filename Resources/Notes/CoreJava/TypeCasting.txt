@@ -1,0 +1,246 @@
+Type-Casting(Type-Conversion)
+-------------------------
+Definition: In Java, Type-Casting is a process that converts a data-type into another data-type.
+
+Type-Casting can be done in two ways:
+---------------------------------------
+1. Automatic Conversion
+2. Manual Conversion(Explicite)
+
+1. Automatic Conversion
+-----------------------
+The Automatic conversion is done by the compiler itself.
+
+	Automatic Conversion
+	---------------------
+	1. Auto-Upcasting
+
+2. Manual Conversion
+---------------------
+The Manual Conversion is done by the programmer.
+
+	Two Types of Manual Conversion
+	----------------------------------
+	1. Explicite-Upcasting
+	2. Explicite-Downcasting
+
+In Java we have Two types of Casting
+-------------------------------------
+1. Primitive Type-Casting
+2. Reference Type-Casting
+
+1.Primitive Type-Casting
+-----------------------------
+
+In Java we have 8 primitive datatypes. Among them 6 are number-types
+
+Primitive number-data-types casting
+------------------------------------
+
+              >______________________________________> Wider(Widening Casting)
+ ---------------------------------------------------------------------------------
+| byte <-------- short <------ int <-------- long <------- float <-------- double  |
+ ---------------------------------------------------------------------------------
+Narrower(Narrowing Casting) <______________________________________<
+
+
+Note: Auto Up-Casting is also called Implicite Casting
+
+
+Auto Widening Type Casting 
+---------------------------
+
+Converting a lower data-type into a higher data-type is called widening type casting. It is also known as implicit conversion. It is done automatically. It is safe because there is no chance of loosing data. 
+
+Auto Widening Type Casting can takes place when:
+------------------------------------------------
+
+1. Both data-types must be compatible with each other
+2. The target must be larger than the source type
+
+Ex: Proper:
+	int i = 10;
+	double d = i;
+Ex: Wrong:
+        String str = "abc";
+	double d = str;
+Ex: Proper:
+	float f = 10.0f;
+	double d = f;
+Ex: Wrong:
+        double d = 10.0;
+	int i = d;
+
+Note: When There is no loss of data then only compiler takes the responsibility of converting, By doing Auto conversion.
+
+Note: Explicite Up-Casting is not neccessary. because compiler only does the job for us.
+
+Note: When there is loss of data. converting from higher range to the smaller range there is a chance of data loss. so compiler will not take that responsibility. it will gives you error.
+Ex: Explicite down-casting
+
+incompatible types: possible lossy conversion from Large_datatype to Small_datatype
+
+Ex: We have 1ltr of bottle with full water, then we have half 1/2(half-liter) of water bottle which is completely empty.
+Task: Fill All the water which is inside the 1ltr bottle to the half-liter bottle.
+Result - 500ml water would be wasted. Water loss.
+Conclusion: Not Recommended
+
+
+Explicite down-casting - done by the programmer itself
+Note: When the target type is smaller and the source type larger. compiler will not do the conversion. programmer only has to do it.
+Ex: 
+double d = 10.0;
+int i = (int)d;
+
+Note: Explicit down-casting is also called as narrowing
+
+ ----------------------------------------------------
+|double --> float --> long --> int --> short --> byte|	
+ ----------------------------------------------------
+
+ Converting a higher data-type into a lower one is called narrowing type-casting. It is also known as explicit conversion or casting. It is done by the programmer. if not then compiler gives an error.
+
+ Note: There is no Auto-Down casting
+ 
+ Note: Any Number of times we can perforom the casting.
+ 
+ Note: We can convert from int to char and vice-versa
+ Ex: 
+ int i = 97;
+ char ch = (char)i;
+ 
+ Ex:
+ char ch = 'a';
+ int i = (int)ch;
+
+ASCII values
+-----------------
+0   NUL     32  SPACE   64  @      96  `      128  Ç
+1   SOH     33  !      65  A      97  a      129  ü
+2   STX     34  "      66  B      98  b      130  é
+3   ETX     35  #      67  C      99  c      131  â
+4   EOT     36  $      68  D     100  d      132  ä
+5   ENQ     37  %      69  E     101  e      133  à
+6   ACK     38  &      70  F     102  f      134  å
+7   BEL     39  '      71  G     103  g      135  ç
+8   BS      40  (      72  H     104  h      136  ê
+9   TAB     41  )      73  I     105  i      137  ë
+10  LF      42  *      74  J     106  j      138  è
+11  VT      43  +      75  K     107  k      139  ï
+12  FF      44  ,      76  L     108  l      140  î
+13  CR      45  -      77  M     109  m      141  ì
+14  SO      46  .      78  N     110  n      142  Ä
+15  SI      47  /      79  O     111  o      143  Å
+16  DLE     48  0      80  P     112  p      144  É
+17  DC1     49  1      81  Q     113  q      145  æ
+18  DC2     50  2      82  R     114  r      146  Æ
+19  DC3     51  3      83  S     115  s      147  ô
+20  DC4     52  4      84  T     116  t      148  ö
+21  NAK     53  5      85  U     117  u      149  ò
+22  SYN     54  6      86  V     118  v      150  û
+23  ETB     55  7      87  W     119  w      151  ù
+24  CAN     56  8      88  X     120  x      152  ÿ
+25  EM      57  9      89  Y     121  y      153  Ö
+26  SUB     58  :      90  Z     122  z      154  Ü
+27  ESC     59  ;      91  [     123  {      155  ¢28  FS      60  <      92  \     124  |      156  £29  GS      61  =      93  ]     125  }      157  ¥
+30  RS      62  >      94  ^     126  ~      158  ₧
+31  US      63  ?      95  _     127  DEL    159  ƒ
+
+______________________________________________________
+
+Reference casting is also known as class casting
+-------------------------------------------------
+- If the left-hand side and right hand side are of the same type then we can call that as Homogenious Assignment.
+Ex: reference is also same type and object is also of the same type.
+Object obj = new Object();
+A a1 = new A();
+
+
+- null is reserved literal and also a keyword.
+- null is also a value.
+- null can be supplied to any reference variable, that indicates reference is not pointing to anywhere(any object).
+- method argument type can be class type
+
+Ex:
+public static void test1(A obj)
+{
+}
+
+- Method return type can be class type but while returning we must return that class type itself.
+Ex:
+static D test1()
+{
+	D d1 = new D();
+	return d1;
+}
+
+- while returning also we can able to create the Object but the return type should be of the same type(returned class type).
+Ex:
+static A test2()
+{
+	return new A();
+}
+
+- if in the left-hand side Super type and in the right-hand side Sub type then auto-upcasting would happen. compiler only does type promotion from  sub-type to the super-type.
+Ex:
+Object obj = new A();
+
+- Super type of references can hold(can point) to sub-type of objects.
+
+- Any type of object can be refered by Object class reference.
+
+- casting applies to references also. sub-type of reference can be casted to super-type of reference.
+
+- Sub class reference cant point to Super class object. 
+Ex:
+A a1 = new Object();
+	
+you will get error.
+
+but forcefully we can down-cast to sub-type.
+Ex:
+A a1 = (A) new Object();
+
+How do you avoid the ClassCastException?
+
+-We can take a suggestion from the `instanceof` operator to avoid the ClassCastException.
+Ex: 
+Object a1 = new A();
+System.out.println(a1 instanceof Object);
+System.out.println(a1 instanceof A);
+System.out.println(a1 instanceof B);
+System.out.println(a1 instanceof C);
+System.out.println(a1 instanceof D);
+
+____________________________________________________________
+
+When do you get ClassCastException?
+
+class A
+{
+}
+class B extends A
+{
+}
+
+class Driver
+{
+	main
+	{
+		A a1 = new A();
+		if(a1 instanceof B)
+		{
+			B b1 = (B)a1;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

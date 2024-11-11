@@ -1,0 +1,7 @@
+Encapsulation
+-----------------------------
+- One of the basic pillars of Object Oriented Programming language.
+- Encapsulation is nothing but wrapping up of data(variables) and code(methods) together as a single unit. ex: Medicine Capsule 
+- Hiding the data or Data Security
+- Data refers to (data members of a class) variables of a class.
+- We can make data members as Read-Only or Write-Only

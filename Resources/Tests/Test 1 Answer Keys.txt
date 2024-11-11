@@ -1,0 +1,219 @@
+1.
+CTE
+
+2. 
+10
+20
+10
+20
+
+3.
+CTE
+
+4.
+CTE
+
+5.
+CTE
+
+6.
+2
+14
+
+7.
+1
+0
+
+8.
+0
+-3
+
+9.
+-2
+-4
+
+10.
+CTE
+
+11.
+from if
+end of main
+
+12.
+end of main
+1
+
+13.
+end of main
+false
+
+14.
+from if
+end of main
+3
+
+
+15.
+2
+3
+
+19.
+CTE
+
+20.
+else2
+
+21.
+from last else
+
+
+22.
+CTE
+
+
+23.
+CTE
+
+24.
+CTE
+
+25.
+CTE
+
+
+26.
+0,20
+1,19
+2,18
+3,17
+4,16
+5,15
+6,14
+7,13
+8,12
+9,11
+10,10
+11,9
+12,8
+13,7
+14,6
+15,5
+
+
+
+27.
+0,20
+1,19
+2,18
+3,17
+4,16
+5,15
+
+
+28.
+loop begin
+loop end
+loop begin
+loop end
+loop begin
+loop end
+loop begin
+loop end
+loop begin
+loop end
+loop begin
+loop end
+loop begin
+loop begin
+loop begin
+loop begin
+main end
+
+29.
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 end
+loop2 begin
+loop2 end
+loop2 begin
+loop1 end
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 end
+loop2 begin
+loop2 end
+loop2 begin
+loop1 end
+main end
+
+30.
+2
+2
+2
+!
+
+31.
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 begin
+loop2 begin
+loop2 begin
+loop1 end
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 begin
+loop2 begin
+loop2 begin
+loop1 end
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 begin
+loop2 begin
+loop2 begin
+loop1 end
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 begin
+loop2 begin
+loop2 begin
+loop1 end
+loop1 begin
+loop2 begin
+loop2 end
+loop2 begin
+loop2 begin
+loop2 begin
+loop2 begin
+loop1 end
+
+32.
+loop1 begin:0
+loop2 begin:0
+loop2 end:1
+loop2 begin:1
+loop2 end:2
+loop1 end:1
+loop1 begin:1
+loop2 begin:0
+loop2 end:1
+loop2 begin:1
+loop2 end:2
+loop1 end:2
+loop1 begin:2
+loop2 begin:0
+loop2 end:1
+loop2 begin:1
+loop2 end:2
+loop1 end:3

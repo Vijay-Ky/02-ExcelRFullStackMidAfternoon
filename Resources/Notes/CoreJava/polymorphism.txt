@@ -1,0 +1,193 @@
+Polymorphism
+-------------
+Definition:
+- Acheiving the same thing in different ways.
+- We can perform a single action in different ways.
+- Polymorphism is derived from 2 greek words: poly - many, morphs - forms, so polymorphism means many-forms.
+
+- We can acheive polymorphism in java basically using methods.
+
+
+There are two types of polymorphism in Java
+--------------------------------------------
+1. Compile-time polymorphism
+2. Run-time polymorphism
+
+
+- Compile-time polymorphism can be acheived through overloading.
+- Run-time polymorphism can be acheived through overriding.
+
+
+What are all the rules for overloading?
+1. We can acheive overloading in the same class.
+2. Method name should be same.
+3. Method parameters/argument/signature should be different.Method return type can be any thing but should be different than other methods
+4. Return type can be same or different.
+5. Access specifiers can be same or different.
+
+- We can avoid un-neccessary method name complications.
+- Since all the methods are doing the same task, we can keep the method name same for all the methods. 
+- But those methods might perform the task in different ways.
+
+- Overloading is an example for compile time polymorphism. All the methods can be static or non-static in the same class. but usually we declare all the methods as static in case of overloading. Since we can acheive overloading easily in the same class by using static methods, and all these static methods are loaded at the time of compilation, we are calling it as compile-time polymorphism. 
+
+- Method parameters data-type can be anything but it should be different for each methods. 
+
+- Method argument type and no. of argument must be different.
+
+- Method parameters data-type must be different if two methods are having same no. of arguments.
+
+Ex1: proper
+static String test(int i)
+static String test(String str)
+
+Ex2: improper
+static String test(int i)
+static String test(int i)
+
+Ex3: proper
+static String test(int i, int j)
+static String test(int i, float j)
+
+Ex4: improper
+static String test(int i, int j)
+static String test(int k, int l)
+
+- if the method parameters are different in numbers then arguments data-type can be anything.
+
+Ex: 
+static String test(int i)
+static String test(int k, String str)
+static String test(int l, String str, boolean b)
+
+Note: PARAMETER == ARGUMENT == SIGNATURE (All these terms are one and the same)
+
+- overloading can be acheived through non-static methods also.
+
+
+Overriding
+-------------
+- Overriding is an example for run-time polymorphism.
+- Overriding can be only acheived through sub-class.
+
+Rules:
+--------
+1. method name must be same.
+2. method argument also must be same.
+3. we can acheive overriding only in the sub-class.(through inheritence only)
+4. we cant acheive overriding in the same class.
+5. method return type also must be same.
+6. method access specifier can be same or wider in the sub-class.
+
+
+- In case of non-static methods overriding object creation matters i,e for which which class you are creating the object that class method would be executed.
+even the reference is super-type.
+
+- In case of static methods overriding object creation matters but reference also must be of the sub-class type and object creation also must be sub-class type.
+then only you would get the execution from the sub-class method.
+
+
+- In case of non-static methods overriding, if the reference is of super-type you have two options.
+  1. you can supply super-type of object only.
+  2. you can supply sub-class of object.
+
+- Here object creation matters. for which class you are creating object that class method would be executing.
+  
+Ex: 
+class Animal
+{
+	void makeSound()
+	{
+		sop("Generic Sound");
+	}
+}
+class Dog
+{
+	void makeSound()
+	{
+		sop("Bark!");
+	}
+}
+class Main
+{
+	psvm(String[] args)
+	{
+		//first option
+		Animal animal = new Animal();
+		//second option
+		Animal dog = new Dog();
+		animal.makeSound();
+		dog.makeSound();
+	}
+}
+o/p
+-----
+Generic Sound
+Bark!
+
+
+- In case of static methods overriding, if the reference is of super-type you have two options.
+  1. you can supply super-type of object only.
+  2. you can supply sub-class of object.
+
+- Here reference matters. for which class you are creating reference that class method would be executing.(eventhough you are creating an object for sub-class you would get the method execution from the super-class, since the reference is of super-type) 
+
+Note: static methods(members) are not involving in polymorphism. mainly we use non-static methods to acheive polymorphism.
+  
+Ex: 
+class Animal
+{
+	static void makeSound()
+	{
+		sop("Generic Sound");
+	}
+}
+class Dog
+{
+	static void makeSound()
+	{
+		sop("Bark!");
+	}
+}
+class Main
+{
+	psvm(String[] args)
+	{
+		//first option
+		Animal animal = new Animal();
+		//second option
+		Animal dog = new Dog();
+		animal.makeSound();
+		dog.makeSound();
+	}
+}
+
+o/p
+--------
+Generic Sound
+Generic Sound
+
+In case of static methods overriding why the reference matters and not the object?
+Because static methods are resolved(loaded) at the compile time itself. unlike non-static methods which are resolved(loaded) at the time of object creation.
+
+
+
+Note: if the reference and object is of the same type then obviously we get the exeuction from that class method only.it doesnt matter that methods are static or non-static.
+
+
+
+
+  
+ 
+  
+
+
+
+
+
+
+
+
+
+
+

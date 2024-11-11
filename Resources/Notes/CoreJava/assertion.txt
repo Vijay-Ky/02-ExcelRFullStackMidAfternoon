@@ -1,0 +1,48 @@
+Asserstions
+------------
+
+- `assert` is a keyword in Java.
+
+- assert is a keyword that got introduced in java JDK 1.4
+
+- assertion helps developers catch logical errors during development and testing phases.
+
+- by using assertion we are making statement that "I believe this condition should always be true at this point in my code" if the condition is false, it means there is a bug in the program
+
+- assertions are particularly useful for debugging and testing purposes.
+
+- assertions provide a way to detect and handle unexpected conditions early in the development process.
+
+- By default assertions are disabled for performance reasons.
+
+- in simple words, whenever a business logic fails we can raise AssertionError
+
+- 2 types of assert statements
+  1.VSA (very simple assert statement)
+     assert boolean_result;
+  2.SA(simple assert statement)
+     assert boolean_result:some_message;
+
+
+
+- to compile a program using different version of java
+javac -source 1.3 -d ../classes pack1/A.java 
+
+
+- to enable asserstion while running the program ==> java -cp ../classes -ea pack1.A
+
+- to disable the asserstion -da but by default it is disabled.
+ /*
+        after colon you must supply something -> literal, valid variable, method calling which is other than void
+         */
+//        assert i == 10 : ;
+//        assert true : ;
+//        assert false : ;
+
+/*
+class wise -> -ea
+for the sub-packages of that package -> -ea:pack2...
+for different package particular class -> -ea:pack2.M
+first we are enabling everywhere then disabling in the package's sub-packages -> -ea -da:pack1...
+* first we are enabling everywhere then disabling in pack1 and subpackages of pack1 and disabling only for the pack2.pack22.N class, so the only class assertion is enabled as of now is pack2.M class which is why we get the error from pack2.M class -> -ea -da:pack1... -da:pack2.pack22.N
+ */

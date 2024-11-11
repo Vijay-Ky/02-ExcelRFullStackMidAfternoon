@@ -1,0 +1,67 @@
+
+- we can call super class method from the sub-class non-static method using `super`.
+  Ex: super.test();
+- super caller can be any where in the method, need not to be in the first line in the method body unlike in the constructors.
+  Ex: 
+  System.out.println("from D test(int) begin");
+  super.test();
+  System.out.println("from D test(int) end");
+
+- super caller can be only kept within only non-static method not static method.
+
+- from the sub-class non-static method we can call super-class static and non-static method both.
+
+- by using super reference we can access static, non-static variable of super-class.
+
+- we can use super reference in the constructors and iibs also. since they are non-static.
+
+- super reference can be anywhere in the constructors and iibs.
+
+Ex:
+
+	J()
+	{
+		super();
+		System.out.println("J() begin");
+		System.out.println(super.i);
+		System.out.println(super.k);
+		System.out.println("J() end");
+	}
+
+	{
+		System.out.println("J-IIB begin");
+		System.out.println(super.i);
+		System.out.println(super.k);
+		System.out.println("J-IIB end");
+	}
+	
+- super calling statement cant be kept inside the IIB blocks. it must be inside the constructors as a first statement only.
+{
+	super();
+}
+
+- in the current class non-static method we call keep `this` reference caller for calling current class methods.
+Ex:
+	public void test()
+	{
+		this.test(10);
+		System.out.println("from K test()");
+	}
+
+	public void test(int i)
+	{
+		System.out.println("from K test(int i)");
+	}
+
+- `this` reference caller can be only kept within non-static methods not static methods.
+
+- from the current class non-static method using `this reference` we can call current class either static or non-static methods.
+
+- `this reference` can be kept anywhere(not neccessarily on the first line) in the body of the non-static methods.
+
+- we can use `this reference` in the IIBs as well as constructors (anywhere not neccessarily on the first line).
+
+- we can access static and non-static variables of the current class by using `this reference` in the current class non-static context.
+
+
+  

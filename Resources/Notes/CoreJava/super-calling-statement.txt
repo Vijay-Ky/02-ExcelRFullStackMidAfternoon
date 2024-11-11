@@ -1,0 +1,44 @@
+Super calling statement
+-----------------------------			
+- In each and every constructor body as a first statement compiler only keeps `super();`
+- This `super();` is going to call the super class no-arg constructor. 
+- super calling statement we can keep in the constructor body as well as method body.
+- According to the argument that we supply to the super, it is going to call the super class constructor.
+
+- There is class called Object that is the inbuilt class.
+- Object class is the super-most class available in java.
+- Each and every class(inbuilt, user defined class) extends Object class either directly or indirectly.
+- for each class Object is the super class either directly or indirectly.
+- From the Object class most important members which is required by all the classes would be inheriting to the sub-classes.
+
+direct sub-class
+-----------------
+Ex1:
+class M 
+Ex2:
+class M extends Object
+
+in-direct sub-class
+-----------------
+Ex1:
+class N extends M
+
+- N directly extending M class
+- N indirectly extending Object class
+
+- In the constructor body if we are keeping `this()` calling statement then compiler will not keep `super()`
+- one constructor is calling another constructor is refered to as `constructor chaining`
+
+- By using super calling statement we can also call super class method, but we can only keep the caller in the non-static context(method) in the sub-class. because super calling statement belongs to non-static. from there we can call either static or non-static method of super class. The reason that we could be able to call either static or non-static method is that 
+Ex: super.test();
+
+- by using super calling statement we can access the static or non-static variables of the super class from the sub-class non-static context.
+
+
+- if there is a `super` calling statement inside the constructor, after `super` statement IIB calling will be kept by the compiler.
+Ex:
+A()
+{
+	super();
+	//IIB caller - kept by the compiler
+}

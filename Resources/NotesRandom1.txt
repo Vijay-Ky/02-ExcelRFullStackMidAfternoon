@@ -1,0 +1,12 @@
+WORA(Write Once Run Anywhere)
+Java is Platform independent
+-> byte code -> Across all the platforms, Windows, Mac, Linux
+-> byte code can be understood by the JVM not by the normal users
+-> along with JDK, JVM also will be there and JRE as well 
+-> if any device is having JDK we can run the .class file in that. 
+-> .class file contains byte codes
+Note: .class file itself is not platform independent, but the byte code which is available within the .class file.
+-> while executing .class file in other platforms(OS) we dont need to change the source code according to the system architecture, Thanks to byte code and JVM. 
+
+
+

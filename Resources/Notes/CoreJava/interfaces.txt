@@ -1,0 +1,49 @@
+Interfaces In Java
+---------------------------
+- We can acheive 100% abstraction by using interfaces.
+- Inteface can be become a member of the Java file.
+- For the interface also Java compiler generates a `.class` file.
+- Internally interfaces also considered as classes by the compiler.
+
+E - By default inteface is abstract there is no need for declaring inteface as abstract, its optional
+
+E- By default whatever the variables that you are declaring are `public`, `static`, `final` 
+Ex: 
+int i = 0; //public static final int i = 0;
+
+E - By default whatever the methods that you are declaring in the inteface are `public` and `abstract`
+Ex: void test1();//public abstract void test1();
+
+E - a class, an abstract class, an inteface can become a member of the java file.
+
+E - interface method return type can be anything.
+
+E - interface abstract methods cannot have body.
+    interface is not allowing any implemented(concrete, defined) methods,
+	this is how we can achieve 100% abstraction.
+	
+E - constructors are not allowed in the interface, bcz constructors are implemented
+
+E - IIB blocks are not allowed in the interface, bcz IIB blocks are implemented, or you will get `initializers not allowed in interfaces` error.
+
+E - SIB blocks are not allowed in the interface, bcz SIB blocks are implemented, or you will get `initializers not allowed in interfaces` error.
+
+E - A class can implement an interface by using `implements` keyword.
+    all the abstract methods of an interface must be implemented in the sub-class or the sub-class must be declared as abstract.
+	for an interace we cant create an object, interface cant be instatiated.
+	for an inteface we can create a referece.
+	interface referece can hold the sub-class object.
+	
+E - while implementing inteface methods in the sub-class
+    - you must give the access specifier as `public` there is no other option. since the interface methods are by default `public` which is the widest, and you cant give the narrower access specifier in the sub-class. 
+	- you must follow the return type and parameters of the interface methods while implementing in the sub-class.
+	
+E - if any method from the interface is not implemented in the sub-class then we must declare that sub-class as abstract.
+
+E- in case of interface variables there wont be any default values. since the variables are by default final.
+
+E - We can acheive multile inheritance through interfaces in Java.
+    One class can implement more than one inteface by using `,` as a seperator.
+
+E - one class can implement any number of interfaces.
+	

@@ -1,0 +1,5 @@
+@FunctionalInterface
+Runnable
+
+- functional interfaces can have only one abstract method
+- and it is specified with @FunctionalInterface annotation

@@ -1,0 +1,116 @@
+1.
+0
+0
+10
+20
+
+2.
+0
+10
+0
+20
+0
+
+3.
+java:5: error: illegal forward reference
+    static int m = n;
+                   ^
+1 error
+
+4.
+3
+
+5.
+0
+10
+
+6.
+from test1
+10
+from test1
+10
+
+7.
+O-SIB
+O-main-b
+N-SIB
+10
+10
+10
+O-main-e
+
+8.
+V-SIB
+V-main-begin
+U-SIB
+U-main
+-----
+U-main
+V-main-end
+
+9.
+10
+
+10.
+2
+
+11.
+test
+SIB1
+SIB2
+done
+10
+
+12.
+test begin
+main0
+test end
+Sib begin
+main20
+Sib end
+main20
+
+13.
+test
+SIB1
+SIB2
+done
+10
+
+14.
+Q-SIB
+------
+P-SIB
+from test1
+from test1
+from test1
+------
+
+15.
+from main
+
+16.
+CTE
+
+17.
+CTE
+
+18.
+main begin
+from if
+
+19.
+main begin
+test1 begin
+test2 begin
+test2 end
+test1 end
+main end
+
+20.
+test:0
+SIB:69
+main begin:10
+test:33
+69
+main end:33
